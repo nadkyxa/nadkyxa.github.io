@@ -1,0 +1,53 @@
+:root { color-scheme: light; --ink: #282d29; --muted: #5f665f; --paper: #f8f7f3; --accent: #6651a7; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-text-size-adjust: 100%; }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.page { max-width: 1040px; margin: auto; padding: max(24px, env(safe-area-inset-top)) max(24px, env(safe-area-inset-right)) max(24px, env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left)); }
+.skip-link { position: absolute; top: -100px; left: 24px; z-index: 2; padding: 12px; background: white; }
+.skip-link:focus { top: 12px; }
+.masthead { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 750; font-size: 15px; letter-spacing: -.3px; }
+.brand-symbol { width: 34px; height: 34px; display: grid; place-content: center; background: var(--ink); color: white; border-radius: 11px; font-size: 25px; }
+.platform { border: 1px solid #d9dcd3; border-radius: 30px; padding: 8px 13px; font-size: 12px; font-weight: 600; }
+.intro { padding: 58px 0 42px; }
+.eyebrow { margin: 0 0 18px; color: var(--accent); font-size: 10px; font-weight: 750; letter-spacing: 1.7px; }
+h1 { margin: 0; font-size: clamp(38px, 6vw, 64px); line-height: 1.05; letter-spacing: -2.6px; font-weight: 750; }
+.accent { color: var(--accent); }
+.intro-copy { margin: 20px 0 0; color: var(--muted); font-size: 15px; line-height: 1.65; }
+.collection { margin-bottom: 36px; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+h2 { margin: 0; font-size: 21px; letter-spacing: -.6px; }
+.section-heading > span { font-size: 9px; letter-spacing: 1.3px; font-weight: 650; color: var(--muted); }
+.app-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.app-card { position: relative; overflow: hidden; display: flex; min-height: 310px; border-radius: 24px; background: #f2e6dc; border: 1px solid #282d2909; }
+.magic-garden { background: #e5eddf; }
+.cute-animal-tile-puzzle { background: #eae6f4; }
+.angry-vegetables { background: #f5e9ce; }
+.fitme { background: #e5ece2; }
+.tvoj-bazar { background: #e1ebf2; }
+.app-info { position: relative; z-index: 1; display: flex; flex: 1; flex-direction: column; align-items: flex-start; padding: 24px; min-width: 0; }
+.app-icon { display: block; width: 56px; height: 56px; border-radius: 14px; box-shadow: 0 3px 8px #282d2910; }
+.category { margin: 18px 0 6px; color: #535952; font-size: 10px; font-weight: 650; letter-spacing: .5px; text-transform: uppercase; }
+h3 { margin: 0; font-size: 23px; line-height: 1.15; letter-spacing: -.7px; overflow-wrap: anywhere; }
+.description { margin: 12px 0 20px; font-size: 13px; line-height: 1.6; color: #4e554e; }
+.store-link { display: inline-flex; justify-content: space-between; align-items: center; gap: 24px; margin-top: auto; min-height: 44px; padding: 11px 16px; background: var(--ink); color: white; text-decoration: none; border-radius: 13px; font-size: 12px; font-weight: 650; }
+.store-link:hover { background: #434d43; }
+.preview { flex: 0 0 32%; position: relative; overflow: hidden; margin-top: 54px; border-radius: 16px 0 0 0; box-shadow: -8px 0 24px #282d2910; background: #ffffff55; }
+.preview img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+footer { border-top: 1px solid #dedfd7; padding: 22px 0 6px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+footer a { text-decoration: none; padding: 8px 0; }
+@media (max-width: 700px) {
+  .page { padding-right: max(18px, env(safe-area-inset-right)); padding-left: max(18px, env(safe-area-inset-left)); }
+  .intro { padding: 38px 0 32px; }
+  h1 { letter-spacing: -1.7px; }
+  .intro-copy { font-size: 13px; }
+  .app-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .app-card { min-height: 292px; border-radius: 21px; }
+  .app-info { padding: 20px; }
+  .preview { flex-basis: 31%; margin-top: 46px; }
+  h3 { font-size: 22px; }
+  .section-heading > span { font-size: 8px; }
+  h2 { font-size: 20px; }
+}
+@media (prefers-reduced-motion: no-preference) { .store-link { transition: background .15s ease; } }
